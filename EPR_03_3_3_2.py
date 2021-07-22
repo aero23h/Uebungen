@@ -1,11 +1,13 @@
+# EPR_03_3_3_2
+
 import random
-import EPR_03_3_3                                                                            #import des Hauptprogramms
+import EPR_03_3_3                                                                            # import des Hauptprogramms
 import time
-#w = well = Brunnen
-#m = match = Streichholz
+# w = well = Brunnen
+# m = match = Streichholz
 
 
-def ssp_w():                                                                                  #Spielerinput: Brunnen(w)
+def ssp_w():                                                                                  # Spielerinput: Brunnen(w)
     random.shuffle(EPR_03_3_3.possibilities)
     computer_input = EPR_03_3_3.possibilities[0]
     if computer_input == "s":
@@ -35,7 +37,7 @@ def ssp_w():                                                                    
         print("Du hast Verloren")
 
 
-def ssp_m():                                                                              #Spielerinput: Streichholz(m)
+def ssp_m():                                                                              # Spielerinput: Streichholz(m)
     random.shuffle(EPR_03_3_3.possibilities)
     computer_input = EPR_03_3_3.possibilities[0]
     if computer_input == "s":

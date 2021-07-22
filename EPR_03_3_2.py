@@ -1,3 +1,5 @@
+# EPR_03_3_2
+
 '''x = 7                                            #Teil ohne Funktion
 string = ""
 for x in range(x, 18, 2):
@@ -6,6 +8,7 @@ for x in range(x, 18, 2):
     x += 2
     print("Now, x is ", x)
     print("All previous numbers: ", string)'''
+
 
 def funktion(x, y):
     x = int(x)

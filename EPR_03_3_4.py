@@ -1,3 +1,4 @@
+# EPR_03_3_4
 
 
 def wandler(numbers):
@@ -32,13 +33,13 @@ def main():
 
     number_list = ["eins", "zwei", "drei", "vier", "fuenf", "sechs", "sieben", "acht", "neun"]
     for i in range(0, len(user_input)):
-        if user_input[i] == ",":                                                                    #Komma überspringen
+        if user_input[i] == ",":                                                                    # Komma überspringen
             continue
-        number_main = number_main + user_input[i]                               #einzelnes Wort einer Variable zuordnen
+        number_main = number_main + user_input[i]                               # einzelnes Wort einer Variable zuordnen
         if number_main in number_list:
-            complete += wandler(number_main)                                      #Wort über Funktion in Zahl umwandeln
+            complete += wandler(number_main)                                      # Wort über Funktion in Zahl umwandeln
             number_main = ""
-        if i == len(user_input) - 1:                                       #Print der ganzen Zahlen am Ende der Eingabe
+        if i == len(user_input) - 1:                                       # Print der ganzen Zahlen am Ende der Eingabe
             print(complete)
 
 

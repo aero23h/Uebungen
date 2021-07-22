@@ -1,12 +1,14 @@
+# EPR_03_3_3
+
 import random
 import time
-import EPR_03_3_3_2                                 #import des Nebenprogramms (Funktionen für Brunnen und Streichholz)
+import EPR_03_3_3_2                                 # import des Nebenprogramms (Funktionen für Brunnen und Streichholz)
 t1 = 1
 t05 = 0.5
 t08 = 0.8
 
 
-def ssp_s():                                                                                   #Spielerinput: Schere(s)
+def ssp_s():                                                                                   # Spielerinput: Schere(s)
     random.shuffle(possibilities)
     computer_input = possibilities[0]
     if computer_input == "s":
@@ -26,7 +28,7 @@ def ssp_s():                                                                    
         print("Du hast Gewonnen!")
 
 
-def ssp_r():                                                                                    #Spielerinput: Stein(r)
+def ssp_r():                                                                                    # Spielerinput: Stein(r)
     random.shuffle(possibilities)
     computer_input = possibilities[0]
     if computer_input == "s":
@@ -56,7 +58,7 @@ def ssp_r():                                                                    
         print("Du hast Gewonnen!")
 
 
-def ssp_p():                                                                                   #Spielerinput: Papier(p)
+def ssp_p():                                                                                   # Spielerinput: Papier(p)
     random.shuffle(possibilities)
     computer_input = possibilities[0]
     if computer_input == "s":
@@ -96,11 +98,11 @@ def main():
     again = True
     print("Komm! Wir spielen Schere, Stein, Papier :)")
     time.sleep(t05)
-    print("Möchtest du dir vorher noch die Regeln durchlesen?\n"                 #Frage ob Regeln geziegt werden sollen
+    print("Möchtest du dir vorher noch die Regeln durchlesen?\n"                 # Frage ob Regeln geziegt werden sollen
           "Ja(y)\n"
           "Nein(n)")
     rules = input("\n--> ")
-    if rules == "y":                                                                             #Aufzählung der Regeln
+    if rules == "y":                                                                             # Aufzählung der Regeln
         print("-Schere schneidet Papier")
         time.sleep(t1)
         print("-Schere schneidet Streichholz")
@@ -126,7 +128,7 @@ def main():
 
     while game and again is True:
         again_right = False
-        print("Bitte Wähle aus:\n"                                                           #erste Auswahl 
+        print("Bitte Wähle aus:\n"                                                           # erste Auswahl 
               "Schere(s)\n"
               "Stein(r)\n"
               "Papier(p)\n"
@@ -135,13 +137,13 @@ def main():
               "Spiel beenden(e)")
         player_input = input("\n--> ")
 
-        if player_input == "e":                                                             #Spiel beenden
+        if player_input == "e":                                                             # Spiel beenden
             time.sleep(t05)
             print("Game Over")
             game = False
             break
 
-        if player_input not in possibilities:                                           #Schleife zur korrekten Eingabe
+        if player_input not in possibilities:                                           # Schleife zur korrekten Eingabe
             go = False
             while go is False:
                 print("Bitte Wähle aus:\n"
@@ -162,20 +164,20 @@ def main():
                 if player_input in possibilities:
                     go = True
 
-        if player_input == "s":                                                       #aufrufen der Funktion für Schere
+        if player_input == "s":                                                       # aufrufen der Funktion für Schere
             ssp_s()
-        if player_input == "r":                                                        #aufrufen der Funktion für Stein
+        if player_input == "r":                                                        # aufrufen der Funktion für Stein
             ssp_r()
-        if player_input == "p":                                                       #aufrufen der Funktion für Papier
+        if player_input == "p":                                                       # aufrufen der Funktion für Papier
             ssp_p()
-        if player_input == "w":                                                      #aufrufen der Funktion für Brunnen
+        if player_input == "w":                                                      # aufrufen der Funktion für Brunnen
             EPR_03_3_3_2.ssp_w()
-        if player_input == "m":                                                  #aufrufen der Funktion für Streichholz
+        if player_input == "m":                                                  # aufrufen der Funktion für Streichholz
             EPR_03_3_3_2.ssp_m()
 
-        while again_right is False and game is True:                                    #Schleife zur korrekten Eingabe
+        while again_right is False and game is True:                                    # Schleife zur korrekten Eingabe
             time.sleep(t08)
-            print("\nnochmal?\n"                                       #Abfrage ob noch eine Runde gespielt werden soll
+            print("\nnochmal?\n"                                       # Abfrage ob noch eine Runde gespielt werden soll
                   "ja(y)\n"
                   "Nein(n)")
             time.sleep(t08)

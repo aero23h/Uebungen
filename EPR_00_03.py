@@ -1,3 +1,6 @@
+# EPR_00_03
+
+
 eingabe = eval(input("Gebe eine maximal fuensstellige Zahl ein "))
 eingabe = int(eingabe)
 laenge = len(str(eingabe))
